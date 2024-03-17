@@ -233,7 +233,7 @@ transform = transforms.Compose([
 mnist_dataset = torchvision.datasets.MNIST(root=image_path, 
                                            train=True, 
                                            transform=transform, 
-                                           download=False)
+                                           download=True)
 
 example, label = next(iter(mnist_dataset))
 print(f'Min: {example.min()} Max: {example.max()}')
